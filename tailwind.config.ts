@@ -13,6 +13,10 @@ export default {
       },
     },
     extend: {
+      fontFamily: {
+        system: ['"JetBrains Mono"', 'monospace'],
+        sans: ['Inter', 'sans-serif'],
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -47,6 +51,16 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        tier: {
+          initiate: "hsl(var(--tier-initiate))",
+          iron: "hsl(var(--tier-iron))",
+          "shadow-candidate": "hsl(var(--tier-shadow-candidate))",
+          dungeon: "hsl(var(--tier-dungeon))",
+          elite: "hsl(var(--tier-elite))",
+          commander: "hsl(var(--tier-commander))",
+          vessel: "hsl(var(--tier-vessel))",
+          monarch: "hsl(var(--tier-monarch))",
+        },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
@@ -65,20 +79,12 @@ export default {
       },
       keyframes: {
         "accordion-down": {
-          from: {
-            height: "0",
-          },
-          to: {
-            height: "var(--radix-accordion-content-height)",
-          },
+          from: { height: "0" },
+          to: { height: "var(--radix-accordion-content-height)" },
         },
         "accordion-up": {
-          from: {
-            height: "var(--radix-accordion-content-height)",
-          },
-          to: {
-            height: "0",
-          },
+          from: { height: "var(--radix-accordion-content-height)" },
+          to: { height: "0" },
         },
       },
       animation: {
